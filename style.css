@@ -139,3 +139,42 @@ body {
   padding: 40px;
   justify-items: center;
 }
+/* POST CARD */
+.post {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.caption {
+  padding: 12px 15px;
+}
+
+.caption h3 {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #05202c;
+}
+
+/* ACTION BAR */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px 15px 15px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.actions span {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.actions span:hover {
+  color: #ff9a76;
+}
