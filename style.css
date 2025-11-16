@@ -343,8 +343,6 @@ body {
   background-color: #ff7a50;
   transform: translateY(-2px);
 }
-
-/* PINTEREST STYLE BIG + BOX */
 .upload-box {
   width: 100%;
   height: 260px;
@@ -421,4 +419,145 @@ body {
   margin-top: 8px;
   color: #666;
   font-size: 0.85rem;
+}
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background 0.4s ease;
+}
+
+/* Fade-in animation for pages */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.sidebar {
+  transition: all 0.35s ease-in-out;
+}
+
+.sidebar ul li:hover {
+  box-shadow: 0 0 15px rgba(255, 178, 36, 0.4);
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 2px solid #333;
+    padding: 12px 10px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .main {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.notification-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.notification-box::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, transparent, #ffbb00, transparent);
+  transition: 0.4s;
+}
+
+.notification-box:hover::after {
+  left: 0;
+}
+
+.notification-box:hover {
+  transform: translateX(10px) scale(1.02);
+  box-shadow: 0 5px 18px rgba(255, 187, 59, 0.25);
+}
+
+
+.upload-box {
+  animation: pulseBox 1.8s infinite ease-in-out;
+}
+
+@keyframes pulseBox {
+  0% { box-shadow: 0 0 0 rgba(255, 176, 0, 0); }
+  50% { box-shadow: 0 0 20px rgba(255, 176, 0, 0.15); }
+  100% { box-shadow: 0 0 0 rgba(255, 176, 0, 0); }
+}
+
+@media (max-width: 600px) {
+  .upload-box {
+    width: 90%;
+    height: 260px;
+  }
+
+  .upload-box span {
+    font-size: 60px;
+  }
+
+  .add-post-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+.gallery {
+  transition: 0.3s ease;
+}
+
+.post {
+  animation: fadeInCards 0.5s ease;
+}
+
+@keyframes fadeInCards {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Make videos scale smoothly on hover */
+.post.video:hover video {
+  transform: scale(1.06);
+  transition: transform 0.3s ease;
+}
+
+button, .add-post-btn {
+  transition: 0.3s ease;
+  transform-origin: center;
+}
+
+button:hover, .add-post-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+}
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff9a76;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+.message-card {
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.08);
+  margin-bottom: 15px;
+  transition: 0.3s ease;
 }
