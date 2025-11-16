@@ -232,3 +232,37 @@ body {
     height: 320px;
   }
 }
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: none;
+    border-right: none;
+    border-bottom: 2px solid #eee;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .sidebar h3 {
+    display: none;
+  }
+}
