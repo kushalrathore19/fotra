@@ -215,3 +215,20 @@ body {
   transform: scale(1.02);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .gallery {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .post {
+    max-width: 100%;
+  }
+
+  .post img,
+  .post video {
+    height: 320px;
+  }
+}
