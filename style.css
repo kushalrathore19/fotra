@@ -131,3 +131,11 @@ body {
   flex: 1;
   padding: 30px;
 }
+/* GALLERY GRID */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  justify-items: center;
+}
