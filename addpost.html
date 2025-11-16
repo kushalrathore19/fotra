@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Post | FOTRA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1><span class="food">FO</span><span class="travel">TRA</span></h1>
+    <h4>Your Daily Dose of Food & Travel Inspiration</h4>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html">Home</a>
+      <a href="travel.html">Travel</a>
+      <a href="food.html">Food</a>
+      <a href="addpost.html" class="add-post active">Add Post</a>
+      <a href="notifications.html">Notifications</a>
+    </div>
+  </nav>
+
+  <div class="main-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Dashboard</h3>
+      <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+        <li><a href="#">Saved</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <section class="content">
+      <h2 style="margin-left:20px; color:#05202c;">Add New Post</h2>
+
+      <div class="addpost-container">
+        
+        <form class="addpost-form">
+          
+          <label>Upload Photo/Video</label>
+          <input type="file" accept="image/*,video/*" required>
+
+          <label>Caption</label>
+          <textarea placeholder="Write your caption..." rows="4" required></textarea>
+
+          <label>Category</label>
+          <select required>
+            <option value="food">Food</option>
+            <option value="travel">Travel</option>
+          </select>
+
+          <button type="submit" class="submit-btn">Post</button>
+
+        </form>
+
+      </div>
+
+    </section>
+  </div>
+
+</body>
+</html>
